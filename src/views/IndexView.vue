@@ -1,5 +1,5 @@
 <template>
-    <div id="index-page">
+    <div id="index">
         <div id="header-text">
             Kerzenverkauf am 01.01.1970 um 12:00 Uhr<br>
             in der Mensa der BBS1-Lüneburg
@@ -33,13 +33,7 @@
 
 
 <style>
-#index-page {
-    background-color: white;
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 100vw;
-    height: 100vh;
+#index {
     padding: 20px;
 }
 
@@ -92,3 +86,5 @@
     transform: translate(-50%, -50%) rotate(45deg);
 }
 </style>
+
+<!-- Test push -->

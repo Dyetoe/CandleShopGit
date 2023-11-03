@@ -14,6 +14,9 @@
               <RouterLink class="nav-link" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
+              <RouterLink class="nav-link" to="/index">Index</RouterLink>
+            </li>
+            <li class="nav-item">
               <RouterLink class="nav-link" to="/prozess">Prozess</RouterLink>
             </li>
             <li class="nav-item">
