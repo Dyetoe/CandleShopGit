@@ -1,6 +1,6 @@
 # CandleShopGit
 
-This template should help get you started developing with Vue 3 in Vite.
+Der CandleShop wird in VueJS umgesetzt. Eine Anleitung zur IDE-Einrichtung lässt sich hier drunter finden. 
 
 ## Recommended IDE Setup
 
