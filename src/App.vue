@@ -7,13 +7,19 @@ import HeaderComponent from "@/components/HeaderComponent.vue";
   <header>
     <HeaderComponent />
   </header>
-
-  <RouterView />
+  <main>
+    <RouterView />
+  </main>
 </template>
 
 <style scoped>
 header {
   background-color: #c9c9c9;
+}
+
+#app > main{
+  width: 95%;
+  margin: 0 auto;
 }
 
 </style>
