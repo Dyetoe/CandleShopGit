@@ -1,5 +1,5 @@
 <template>
-  <div class='impressum'>
+<div id="lower" class='impressum'>
     <h1>Impressum</h1>
     <p>Angaben gemäß § 5 TMG</p>
     <p>Max Muster <br>
@@ -22,6 +22,7 @@
       Musteraufsicht Musterstadt<br></p><br>
     Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a> der <a
       href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/" rel="nofollow">Kanzlei Hasselbach, Frankfurt</a>
-</div></template>
+</div>
+</template>
 
 <style></style>
