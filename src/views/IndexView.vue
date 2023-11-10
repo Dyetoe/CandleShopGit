@@ -33,8 +33,13 @@
 
 
 <style>
+:root {
+    --row-gap: 50px;
+    --candle-container-width: 300px;
+}
+
 #index {
-    padding: 20px;
+    padding: 30px 0 50px;
 }
 
 #header-text {
@@ -44,7 +49,7 @@
 
 #candle-grid {
     display: grid;
-    grid-template-columns: repeat(3, 300px);
+    grid-template-columns: repeat(3, var(--candle-container-width));
     grid-column-gap: 120px;
     justify-content: center;
     margin-top: 40px;
@@ -85,6 +90,17 @@
 .candle-container:after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
-</style>
 
-<!-- Test push -->
+
+@media screen and (max-width: 1190px) {
+    #candle-grid {
+        grid-template-columns: repeat(2, var(--candle-container-width));
+        grid-row-gap: var(--row-gap);
+    }
+}
+@media screen and (max-width: 790px) {
+    #candle-grid {
+        grid-template-columns: var(--candle-container-width);
+    }
+}
+</style>
