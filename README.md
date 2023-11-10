@@ -2,6 +2,16 @@
 
 Der CandleShop wird in VueJS umgesetzt. Eine Anleitung zur IDE-Einrichtung lässt sich hier drunter finden. 
 
+### Team 'Kreativer Name'
+
+#### Mitglieder
+* Jano Lehnen
+* Emil Gietschel
+* Alexander Eigenser
+* Lukas Morawe
+* Stefan Hinrichs
+* Lennart Elsäßer
+
 ## Recommended IDE Setup
 
 [VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur) + [TypeScript Vue Plugin (Volar)](https://marketplace.visualstudio.com/items?itemName=Vue.vscode-typescript-vue-plugin).
