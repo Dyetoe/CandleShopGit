@@ -14,9 +14,6 @@
               <RouterLink class="nav-link" to="/">Home</RouterLink>
             </li>
             <li class="nav-item">
-              <RouterLink class="nav-link" to="/index">Index</RouterLink>
-            </li>
-            <li class="nav-item">
               <RouterLink class="nav-link" to="/prozess">Prozess</RouterLink>
             </li>
             <li class="nav-item">
@@ -44,7 +41,7 @@ nav {
 
 nav a.router-link-exact-active {
   text-decoration: none;
-  color: var(--color-text);
+  color: #fc7c01;
 }
 
 nav a.router-link-exact-active:hover {
