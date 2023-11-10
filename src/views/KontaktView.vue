@@ -1,12 +1,12 @@
 <template>
-  <div>
+  <div class="container">
+    <div style="justify-content: center; text-align: center; width: 40%">
     <h1>Kontaktformular</h1>
-    <label for="email">E-Mail:</label>
-    <div class="form-group">
-      
+    <label for="email" style="margin-bottom: 4px; font-weight: bold; font-size: 18px">E-Mail Adresse</label>
+    <div style="align-self: center;" class="form-group container">
       <input type="email" id="email" v-model="email" required>
     </div>
-    <label for="comment">Kommentar:</label>
+    <label style="margin-top: 4px; margin-bottom: 4px; font-weight: bold; font-size: 18px" for="comment">Nachricht</label>
     <div class="form-group">
       
       <textarea id="comment" v-model="comment" required></textarea>
@@ -14,6 +14,7 @@
     <div class="form-group">
       <br>
       <button class="button-62" @click="submitForm">Abschicken</button>
+    </div>
     </div>
   </div>
 </template>
@@ -64,6 +65,23 @@ export default defineComponent({
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+}
+
+.container {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#email {
+  width: 70%;
+}
+
+#comment {
+  width: 100%;
+  height: 200px;
 }
 
 .button-62:not([disabled]):focus {
