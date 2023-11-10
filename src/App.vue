@@ -10,6 +10,7 @@ import FooterComponent from "@/components/FooterComponent.vue";
   </header>
   <main>
     <RouterView />
+    <a id="lower"></a>
   </main>
   <footer>
     <FooterComponent />
@@ -23,6 +24,7 @@ header {
 
 footer {
   background-color: #fc7c01;
+  margin-top: -62px;
 }
 
 #app > main{
@@ -33,6 +35,7 @@ footer {
   flex-direction: column;
   min-height: 80vh;
 }
-
-
+#lower {
+  margin-bottom: 70px;
+}
 </style>
