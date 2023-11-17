@@ -1,28 +1,38 @@
 <template>
 <div id="lower" class='impressum'>
-    <h1>Impressum</h1>
-    <p>Angaben gemäß § 5 TMG</p>
-    <p>Max Muster <br>
-      Musterweg<br>
-      12345 Musterstadt <br>
-    </p>
-    <p> <strong>Vertreten durch: </strong><br>
-      Max Muster<br>
-    </p>
-    <p><strong>Kontakt:</strong> <br>
-      Telefon: 01234-789456<br>
-      Fax: 1234-56789<br>
-      E-Mail: <a href='mailto:max@muster.de'>max@muster.de</a><br></p>
-    <p><strong>Umsatzsteuer-ID: </strong> <br>
-      Umsatzsteuer-Identifikationsnummer gemäß §27a Umsatzsteuergesetz: Musterustid.<br><br>
-      <strong>Wirtschafts-ID: </strong><br>
-      Musterwirtschaftsid<br>
-    </p>
-    <p><strong>Aufsichtsbehörde:</strong><br>
-      Musteraufsicht Musterstadt<br></p><br>
-    Impressum vom <a href="https://www.impressum-generator.de">Impressum Generator</a> der <a
-      href="https://www.kanzlei-hasselbach.de/standorte/frankfurt/" rel="nofollow">Kanzlei Hasselbach, Frankfurt</a>
+    <h1>Impressum</h1><br>
+<p >
+Dies ist eine Seite<br>
+der BBS I Lüneburg<br>
+Spillbrunnenweg 1<br>
+
+21337 Lüneburg<br><br>
+ 
+<h5>Vertretung</h5>
+Oberstudiendirektor Heiko Lüdemann<br><br>
+
+<h5>Datenschutz</h5>
+Sofern innerhalb dieser Homepage die Möglichkeit zur Eingabe persönlicher oder geschäftlicher<br>
+Daten (E-Mail-Adressen, Namen, Anschriften) besteht, so erfolgt die Preisgabe dieser Daten<br>
+seitens des Nutzers ausdrücklich auf freiwilliger Ba­sis.<br>
+Datenschutzbestimmungen</p><br>
+
+<h5>Entwicklung</h5>
+Diese Website ist ein Produkt der BBS I Lüneburg und wurde im Rahmen des Lernfeldes<br>
+10 der dualen Ausbildung zum Fachinformatiker für Anwendungsentwicklung entwickelt von:<br><br>
+<li v-for="author in authors">
+<a :href="author.social">{{author.name}}</a>
+</li>
 </div>
 </template>
+
+<script setup>
+let authors = [{name: "Jano Lehnen", social: "https://www.twitch.tv/tacqz"},
+               {name: "Stefan Hinrichs", social: "https://github.com/frank765324624576"},
+               {name: "Lennart Eläßer", social: "https://github.com/Lennart12345678"},
+               {name: "Emil Gietschel", social: "https://github.com/Dyetoe"}, 
+               {name: "Alexander Eigenser", social: "https://github.com/Alex470742"}, 
+               {name: "Lukas Morawe", social: "https://github.com/SkulIreaper"}];
+</script>
 
 <style></style>
