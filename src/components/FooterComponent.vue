@@ -1,11 +1,11 @@
 <template>
   <div class="wrapper p-2">
-        <div class="Logos">
-          <img alt="Instagram_Logo" class="logo" src="@/assets/Instagram.png" width="100" height="100" />
-          <img alt="Twitter_Logo" class="logo" src="@/assets/Twitter.png" width="100" height="100" />
-          <img alt="Facebook_Logo" class="logo" src="@/assets/Facebook.png" width="100" height="100" />
+        <div class="Logos text-center">
+          <img alt="Instagram_Logo" class="logo" src="@/assets/Instagram.png" width="50" height="50" />
+          <img alt="Twitter_Logo" class="logo" src="@/assets/Twitter.png" width="50" height="50" />
+          <img alt="Facebook_Logo" class="logo" src="@/assets/Facebook.png" width="50" height="50" />
         </div>
-  </div>
+  </div> 
 </template>
 
 <script setup>
