@@ -4,7 +4,8 @@
     <div class="container-fluid">
       <div class="row row-cols-*">
         <div class="col-lg-4">
-          <img class="img-placeholder">
+          <img class="prozessimg" src="@/assets/Prozess1.jpg" width="100%">
+          <img class="prozessimg" src="@/assets/Prozess3.jpg" width="100%">
         </div>
         <div class="col-lg-4 pt-4 pt-lg-0 pb-4 pb-lg-0">
           <div class="prozess-text">
@@ -15,7 +16,8 @@ Wir sind überzeugt, dass Sie von der Qualität unserer Kerzen und dem Engagemen
           </div>
         </div>
         <div class="col-lg-4">
-          <img class="img-placeholder">
+          <img class="prozessimg" src="@/assets/Prozess2.jpg" width="100%">
+          <img class="prozessimg" src="@/assets/Prozess4.jpeg" width="100%">
         </div>
       </div>
     </div>
