@@ -1,35 +1,79 @@
 <template>
     <div id="index">
+
+
         <div id="header-text">
             Kerzenverkauf am 01.01.1970 um 12:00 Uhr<br>
             in der Mensa der BBS1-Lüneburg
         </div>
 
-        <div id="candle-grid">
+        <div id="candle-frame">
 
-            <div class="candle-container">
-                <div class="candle-title">Kerze 1</div>
-                <img class="candle-image">
-                <div class="candle-price">3000€</div>
+            <div id="swipe-left-button" @click="swipe_left"></div>
+            
+            <div id="candle-grid">
+                <div class="candle-container">
+                    <div class="candle-title">Kerze 1</div>
+                    <img class="candle-image" src="">
+                    <div class="candle-price">3000€</div>
+                </div>
+    
+                <div class="candle-container">
+                    <div class="candle-title">Kerze 2</div>
+                    <img class="candle-image" src=""/>
+                    <div class="candle-price">5000€</div>
+                </div>
+    
+                <div class="candle-container">
+                    <div class="candle-title">Kerze 3</div>
+                    <img class="candle-image" src="">
+                    <div class="candle-price">8000€</div>
+                </div>
+    
+                <div class="candle-container">
+                    <div class="candle-title">Kerze 4</div>
+                    <img class="candle-image" src="">
+                    <div class="candle-price">80000€</div>
+                </div>
+    
+                <div class="candle-container">
+                    <div class="candle-title">Kerze 5</div>
+                    <img class="candle-image" src="">
+                    <div class="candle-price">100000€</div>
+                </div>
             </div>
 
-            <div class="candle-container">
-                <div class="candle-title">Kerze 2</div>
-                <img class="candle-image">
-                <div class="candle-price">5000€</div>
-            </div>
-
-            <div class="candle-container">
-                <div class="candle-title">Kerze 3</div>
-                <img class="candle-image">
-                <div class="candle-price">8000€</div>
-            </div>
+            <div id="swipe-right-button" @click="swipe_right"></div>
         </div>
 
 
     </div>
 </template>
 
+
+
+<script>
+function swipe_left() {
+    let candle_grid = document.getElementById("candle-grid");
+    let candle_container = candle_grid.lastChild;
+    candle_grid.removeChild(candle_container);
+    candle_grid.insertBefore(candle_container, candle_grid.firstChild);
+}
+window.onload = () => {
+    swipe_left();
+}
+export default {
+    methods: {
+        swipe_left,
+        swipe_right() {
+            let candle_grid = document.getElementById("candle-grid");
+            let candle_container = candle_grid.firstChild;
+            candle_grid.removeChild(candle_container);
+            candle_grid.appendChild(candle_container);
+        }
+    }
+}
+</script>
 
 
 <style>
@@ -47,13 +91,85 @@
     font-size: 18px;
 }
 
+
+
+#swipe-left-button, #swipe-right-button {
+    width: 40px;
+    height: 40px;
+    background-color: #e6d9d9;
+    position: relative;
+    border-radius: 100%;
+    cursor: pointer;
+    transition: box-shadow 0.1s;
+}
+#swipe-left-button:hover, #swipe-right-button:hover {
+    box-shadow: 0 0 7px #8c8686;
+    transition: box-shadow 0.1s;
+}
+
+#swipe-left-button {
+    margin-right: 25px;
+}
+#swipe-left-button::before, #swipe-right-button::before {
+    content: "";
+    width: 40%;
+    height: 40%;
+    position: absolute;
+    top: 50%;
+    transform: translate(-50%, -50%) rotate(-45deg);
+}
+
+
+#swipe-left-button::before {
+    border-left: 2px solid #887e7d;
+    border-top: 2px solid #887e7d;
+    left: 55%;
+}
+
+#swipe-right-button {
+    margin-left: 25px;
+}
+#swipe-right-button::before {
+    border-right: 2px solid #887e7d;
+    border-bottom: 2px solid #887e7d;
+    left: 45%;
+}
+
+
+
+#candle-frame {
+    display: inline-grid;
+    grid-template-columns: auto 1fr auto;
+    margin-top: 40px;
+    align-items: center;
+
+    position: relative;
+    left: 50%;
+    transform: translateX(-50%);
+}
+
 #candle-grid {
     display: grid;
-    grid-template-columns: repeat(3, var(--candle-container-width));
+    grid-template-columns: repeat(5, var(--candle-container-width));
     grid-column-gap: 120px;
     justify-content: center;
-    margin-top: 40px;
+    /* margin-top: 40px; */
+
+
+    max-width: 1140px;
+    overflow: hidden;
+    margin: 0 auto 0;
+
 }
+
+
+@keyframes slide-left {
+    from {
+
+    }
+}
+
+
 
 .candle-container {
     position: relative;
