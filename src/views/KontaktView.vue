@@ -21,18 +21,41 @@
 
 <script lang="ts">
 import { defineComponent } from "vue";
+import axios from "axios"; // Importiere Axios
 
 export default defineComponent({
   data() {
     return {
       email: "",
-      comment: ""
+      comment: "",
     };
   },
   methods: {
-    submitForm() {
-    }
-  }
+    async submitForm() {
+      try {
+        if (!this.email || !this.comment) {
+          return;
+        }
+
+        const response = await axios.post("http://localhost:5173/send-email", {
+          email: this.email,
+          comment: this.comment,
+        });
+
+        if (response.status === 200) {
+          console.log("E-Mail wurde erfolgreich gesendet!");
+          this.email = "";
+          this.comment = "";
+        } else {
+          // Fehler beim Senden
+          console.log("Fehler beim Senden der E-Mail.");
+        }
+      } catch (error) {
+        console.error("Fehler beim Senden der E-Mail:", error);
+        alert("Fehler beim Senden der E-Mail.");
+      }
+    },
+  },
 });
 </script>
 
