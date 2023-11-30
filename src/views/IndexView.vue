@@ -14,31 +14,31 @@
             <div id="candle-grid">
                 <div class="candle-container">
                     <div class="candle-title">Kerze 1</div>
-                    <img class="candle-image" src="">
+                    <img class="candle-image" src="@/assets/IMG_1439.jpg">
                     <div class="candle-price">3000€</div>
                 </div>
     
                 <div class="candle-container">
                     <div class="candle-title">Kerze 2</div>
-                    <img class="candle-image" src=""/>
+                    <img class="candle-image" src="@/assets/IMG_1442.jpg"/>
                     <div class="candle-price">5000€</div>
                 </div>
     
                 <div class="candle-container">
                     <div class="candle-title">Kerze 3</div>
-                    <img class="candle-image" src="">
+                    <img class="candle-image" src="@/assets/IMG_1444.jpg">
                     <div class="candle-price">8000€</div>
                 </div>
     
                 <div class="candle-container">
                     <div class="candle-title">Kerze 4</div>
-                    <img class="candle-image" src="">
+                    <img class="candle-image" src="@/assets/IMG_1452.jpg">
                     <div class="candle-price">80000€</div>
                 </div>
     
                 <div class="candle-container">
                     <div class="candle-title">Kerze 5</div>
-                    <img class="candle-image" src="">
+                    <img class="candle-image" src="@/assets/IMG_9121.jpeg">
                     <div class="candle-price">100000€</div>
                 </div>
             </div>
@@ -153,22 +153,10 @@ export default {
     grid-template-columns: repeat(5, var(--candle-container-width));
     grid-column-gap: 120px;
     justify-content: center;
-    /* margin-top: 40px; */
-
-
     max-width: 1140px;
     overflow: hidden;
     margin: 0 auto 0;
-
 }
-
-
-@keyframes slide-left {
-    from {
-
-    }
-}
-
 
 
 .candle-container {
@@ -191,6 +179,7 @@ export default {
     background: #cacaca;
 }
 
+/*
 .candle-container::before, .candle-container::after {
     content: "";
     position: absolute;
@@ -206,7 +195,7 @@ export default {
 .candle-container:after {
     transform: translate(-50%, -50%) rotate(45deg);
 }
-
+*/
 
 @media screen and (max-width: 1190px) {
     #candle-grid {
