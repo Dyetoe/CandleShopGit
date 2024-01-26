@@ -1,21 +1,60 @@
 <template>
-  <div class="container">
-    <div style="justify-content: center; text-align: center; width: 40%">
+  <div class="container mt-4">
     <h1>Kontaktformular</h1>
-    <label for="email" style="margin-bottom: 4px; font-weight: bold; font-size: 18px">E-Mail Adresse</label>
-    <div style="align-self: center;" class="form-group container">
-      <input type="email" id="email" v-model="email" required>
-    </div>
-    <label style="margin-top: 4px; margin-bottom: 4px; font-weight: bold; font-size: 18px" for="comment">Nachricht</label>
-    <div class="form-group">
-      
-      <textarea id="comment" v-model="comment" required></textarea>
-    </div>
-    <div class="form-group">
-      <br>
-      <button class="button-62" @click="submitForm">Abschicken</button>
-    </div>
-    </div>
+    <form @submit.prevent="submitForm">
+      <div class="mb-3">
+        <label for="salutation" class="form-label">Anrede*</label>
+        <select class="form-select" id="salutation" name="salutation" required>
+          <option value="" disabled selected>Wählen Sie eine Option</option>
+          <option>Herr</option>
+          <option>Frau</option>
+        </select>
+      </div>
+
+      <div class="mb-3">
+        <label for="firstName" class="form-label">Vorname*</label>
+        <input type="text" class="form-control" id="firstName" name="firstName" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="lastName" class="form-label">Nachname*</label>
+        <input type="text" class="form-control" id="lastName" name="lastName" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="birthday" class="form-label">Geburtstag*</label>
+        <input type="date" class="form-control" id="birthday" name="birthday" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="phone" class="form-label">Telefonnummer*</label>
+        <input type="tel" class="form-control" id="phone" name="phone" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="email" class="form-label">E-Mail*</label>
+        <input type="email" class="form-control" id="email" name="email" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="address" class="form-label">Adresse*</label>
+        <input type="text" class="form-control" id="address" name="address" required>
+      </div>
+
+      <div class="mb-3">
+        <label for="comment" class="form-label">Anliegen*</label>
+        <textarea class="form-control" id="comment" name="comment" rows="3" required></textarea>
+      </div>
+
+      <div class="form-check">
+        <input class="form-check-input" type="checkbox" value="" id="dsgvoCheckBox" required>
+        <label class="form-check-label" for="dsgvoCheckBox">
+          Datenschutzbestimmung zustimmen
+        </label>
+      </div>
+
+      <button type="submit" class="button-62">Abschicken</button>
+    </form>
   </div>
 </template>
 
@@ -63,7 +102,7 @@ export default defineComponent({
 @media (min-width: 1024px) {
   .kontakt {
     min-height: 100vh;
-    display: flex;
+
     align-items: center;
   }
 }
@@ -93,7 +132,6 @@ export default defineComponent({
 .container {
   width: 100%;
   height: 100%;
-  display: flex;
   justify-content: center;
   align-items: center;
 }
@@ -115,3 +153,5 @@ export default defineComponent({
   box-shadow: 0 0 .25rem rgba(0, 0, 0, 0.5), -.125rem -.125rem 1rem rgba(239, 71, 101, 0.5), .125rem .125rem 1rem rgba(255, 154, 90, 0.5);
 }
 </style>
+
+
