@@ -127,6 +127,8 @@ export default defineComponent({
   -webkit-user-select: none;
   touch-action: manipulation;
   white-space: nowrap;
+  margin-bottom: 2rem;
+  margin-top: 1rem;
 }
 
 .container {
