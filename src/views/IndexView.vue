@@ -207,5 +207,5 @@ export default {
     #candle-grid {
         grid-template-columns: var(--candle-container-width);
     }
-} */
+} 
 </style>
