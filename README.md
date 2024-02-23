@@ -1,6 +1,6 @@
 # CandleShopGit
 
-Der CandleShop wird in VueJS umgesetzt. Eine Anleitung zur IDE-Einrichtung lässt sich hier drunter finden. 
+Der CandleShop wird in VueJS umgesetzt. Eine Anleitung zur IDE-Einrichtung lässt sich hier drunter finden. Da die Datenschutzseite unter Github Pages nicht korrekt lädt, ist die Datei als HTML im Stammverzeichnis (https://github.com/Dyetoe/CandleShopGit/blob/main/Datenschutz-Seite.html) hochgeladen. Diese kann runtergeladen und zur Beurteilung im Browser geöffnet werden.
 
 ### Team 'Kreativer Name'
 
