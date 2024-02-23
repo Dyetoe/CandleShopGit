@@ -8,6 +8,7 @@
           <option value="" disabled selected>Wählen Sie eine Option</option>
           <option>Herr</option>
           <option>Frau</option>
+          <option>Divers</option>
         </select>
       </div>
 
@@ -22,23 +23,8 @@
       </div>
 
       <div class="mb-3">
-        <label for="birthday" class="form-label">Geburtstag*</label>
-        <input type="date" class="form-control" id="birthday" name="birthday" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="phone" class="form-label">Telefonnummer*</label>
-        <input type="tel" class="form-control" id="phone" name="phone" required>
-      </div>
-
-      <div class="mb-3">
         <label for="email" class="form-label">E-Mail*</label>
         <input type="email" class="form-control" id="email" name="email" required>
-      </div>
-
-      <div class="mb-3">
-        <label for="address" class="form-label">Adresse*</label>
-        <input type="text" class="form-control" id="address" name="address" required>
       </div>
 
       <div class="mb-3">
@@ -49,7 +35,7 @@
       <div class="form-check">
         <input class="form-check-input" type="checkbox" value="" id="dsgvoCheckBox" required>
         <label class="form-check-label" for="dsgvoCheckBox">
-          Datenschutzbestimmung zustimmen
+          <RouterLink to="/datenschutz" target="_blank">Datenschutzbestimmung zustimmen</RouterLink>
         </label>
       </div>
 
